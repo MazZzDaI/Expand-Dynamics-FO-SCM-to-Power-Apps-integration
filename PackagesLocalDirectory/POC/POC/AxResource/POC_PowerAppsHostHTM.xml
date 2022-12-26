@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxResource xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>POC_PowerAppsHostHTM</Name>
+	<FileName>POC_PowerAppsHost.htm</FileName>
+	<RelativeUriInModelStore>POC\POC\AxResource\ResourceContent\Html\POC_PowerAppsHost.htm</RelativeUriInModelStore>
+	<TypeOfResource>Html</TypeOfResource>
+</AxResource>

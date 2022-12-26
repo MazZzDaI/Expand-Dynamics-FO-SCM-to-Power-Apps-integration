@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "POC_ExtendedPowerAppCallArgs", "POC_ExtendedPowerAppCallArgs\POC_ExtendedPowerAppCallArgs.rnrproj", "{F94D4CDC-073A-4C32-B58B-4AD5DE13471A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F94D4CDC-073A-4C32-B58B-4AD5DE13471A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94D4CDC-073A-4C32-B58B-4AD5DE13471A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1D1557C-EE4D-4FAA-B25F-853DFB924F15}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/schibstedfinance
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = POC_ExtendedPowerAppCallArgs\\POC_ExtendedPowerAppCallArgs.rnrproj
+		SccProjectName1 = POC_ExtendedPowerAppCallArgs
+		SccLocalPath1 = POC_ExtendedPowerAppCallArgs
+	EndGlobalSection
+EndGlobal

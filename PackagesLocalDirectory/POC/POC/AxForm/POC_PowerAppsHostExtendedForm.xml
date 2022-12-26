@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxForm xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>POC_PowerAppsHostExtendedForm</Name>
+	<SourceCode>
+		<Methods xmlns="">
+			<Method>
+				<Name>classDeclaration</Name>
+				<Source><![CDATA[
+[Form]
+public class POC_PowerAppsHostExtendedForm extends FormRun
+{
+}
+
+]]></Source>
+			</Method>
+		</Methods>
+		<DataSources xmlns="" />
+		<DataControls xmlns="" />
+		<Members xmlns="" />
+	</SourceCode>
+	<DataSources />
+	<Design>
+		<Caption xmlns="">POC Power Apps extensive control demo</Caption>
+		<DialogSize xmlns="">Large</DialogSize>
+		<Pattern xmlns="">DialogReadOnly</Pattern>
+		<PatternVersion xmlns="">1.2</PatternVersion>
+		<Style xmlns="">Dialog</Style>
+		<ViewEditMode xmlns="">View</ViewEditMode>
+		<WindowType xmlns="">Slider</WindowType>
+		<Controls xmlns="">
+			<AxFormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>ContentGroup</Name>
+				<HeightMode>SizeToAvailable</HeightMode>
+				<Pattern>Custom</Pattern>
+				<Type>Group</Type>
+				<WidthMode>SizeToAvailable</WidthMode>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormContainerControl">
+						<Name>POC_PowerAppsHostExtended</Name>
+						<HeightMode>SizeToAvailable</HeightMode>
+						<Type>Container</Type>
+						<WidthMode>SizeToAvailable</WidthMode>
+						<FormControlExtension>
+							<Name>POC_PowerAppsHostExtended</Name>
+							<ExtensionComponents />
+							<ExtensionProperties>
+								<AxFormControlExtensionProperty>
+									<Name>appId</Name>
+									<Type>String</Type>
+									<Value>8a4f32f7-e89e-406a-acd0-ed53a94e0627</Value>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>allowUserSetup</Name>
+									<Type>Enum</Type>
+									<TypeName>FormAllowUserSetup</TypeName>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>contextControlName</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>powerAppsEnvironment</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>entityId</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>entityIdDataSource</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>entityIdDataField</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>entityIdMethod</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+							</ExtensionProperties>
+						</FormControlExtension>
+						<Controls />
+					</AxFormControl>
+				</Controls>
+				<Style>DialogContent</Style>
+			</AxFormControl>
+			<AxFormControl xmlns=""
+				i:type="AxFormButtonGroupControl">
+				<Name>ButtonGroup</Name>
+				<Type>ButtonGroup</Type>
+				<WidthMode>SizeToAvailable</WidthMode>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormCommandButtonControl">
+						<Name>OK</Name>
+						<Type>CommandButton</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Command>Cancel</Command>
+						<DefaultButton>Yes</DefaultButton>
+						<SaveRecord>No</SaveRecord>
+						<Text>@SYS15212</Text>
+					</AxFormControl>
+				</Controls>
+				<ArrangeMethod>HorizontalRight</ArrangeMethod>
+				<Style>DialogCommitContainer</Style>
+			</AxFormControl>
+		</Controls>
+	</Design>
+	<Parts />
+</AxForm>

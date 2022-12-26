@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>POC</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{f94d4cdc-073a-4c32-b58b-4ad5de13471a}</ProjectGuid>
+    <Name>POC_ExtendedPowerAppCallArgs</Name>
+    <RootNamespace>POC_ExtendedPowerAppCallArgs</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="Form Extensions\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\POC_PowerAppsHostExtended">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostExtended</Name>
+      <Link>Classes\POC_PowerAppsHostExtended</Link>
+    </Content>
+    <Content Include="AxClass\POC_PowerAppsHostExtendedBuild">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostExtendedBuild</Name>
+      <Link>Classes\POC_PowerAppsHostExtendedBuild</Link>
+    </Content>
+    <Content Include="AxClass\POC_SysDisplayPAControl_Extension">
+      <SubType>Content</SubType>
+      <Name>POC_SysDisplayPAControl_Extension</Name>
+      <Link>Classes\POC_SysDisplayPAControl_Extension</Link>
+    </Content>
+    <Content Include="AxFormExtension\SysDisplayPAControl.POCExtension">
+      <SubType>Content</SubType>
+      <Name>SysDisplayPAControl.POCExtension</Name>
+      <Link>Form Extensions\SysDisplayPAControl.POCExtension</Link>
+    </Content>
+    <Content Include="AxForm\POC_PowerAppsHostExtendedForm">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostExtendedForm</Name>
+      <Link>Forms\POC_PowerAppsHostExtendedForm</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\POC_PowerAppsHostExtendedDisplay">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostExtendedDisplay</Name>
+      <Link>Display Menu Items\POC_PowerAppsHostExtendedDisplay</Link>
+    </Content>
+    <Content Include="AxResource\POC_PowerAppsHostHTM">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostHTM</Name>
+      <Link>Resources\POC_PowerAppsHostHTM</Link>
+    </Content>
+    <Content Include="AxResource\POC_PowerAppsHostJS">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHostJS</Name>
+      <Link>Resources\POC_PowerAppsHostJS</Link>
+    </Content>
+    <Content Include="POC_PowerAppsHost.htm">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHost.htm</Name>
+      <DependentUpon>AxResource\POC_PowerAppsHostHTM</DependentUpon>
+    </Content>
+    <Content Include="POC_PowerAppsHost.js">
+      <SubType>Content</SubType>
+      <Name>POC_PowerAppsHost.js</Name>
+      <DependentUpon>AxResource\POC_PowerAppsHostJS</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>

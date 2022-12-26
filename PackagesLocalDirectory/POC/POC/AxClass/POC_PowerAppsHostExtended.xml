@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>POC_PowerAppsHostExtended</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// Runtime class for the extended POC_PowerAppsHostExtended control.
+/// </summary>
+[FormControlAttribute('PowerAppsHost', 'POC_PowerAppsHost', classStr(POC_PowerAppsHostExtendedBuild))]
+public class POC_PowerAppsHostExtended extends PowerAppsHost
+{
+    public FormProperty erpIsAdminProperty;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Initializes a new instance of the control.
+    /// </summary>
+    /// <param name = '_build'>The associated build class instance.</param>
+    /// <param name = '_formRun'>The containing form.</param>
+    protected void new(FormBuildControl _build, FormRun _formRun)
+    {
+        super(_build, _formRun);
+
+        erpIsAdminProperty = this.addProperty(methodstr(POC_PowerAppsHostExtended, ErpIsAdmin), Types::String);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>setResourceBundleName</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Sets the name of the resource bundle to be used by this control. This must be done before initialization.
+    /// </summary>
+    /// <param name = "_resourceBundleName">The resource bundle name</param>
+    protected void setResourceBundleName(str _resourceBundleName)
+    {
+        super('/resources/html/POC_PowerAppsHost'); //Override with custom resource
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ErpIsAdmin</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// The flag indicating whenever ERP user is admin.
+    /// </summary>
+    /// <param name = '_valueOrBinding'>Flag indicating is ERP user is admin or not.</param>
+    /// <returns>Flag indicating is ERP user is admin or not.</returns>
+    /// <remarks>
+    /// This holds ERP user's admin or not flag
+    /// </remarks>
+    [FormPropertyAttribute(FormPropertyKind::BindableValue, 'ErpIsAdmin')]
+    public str ErpIsAdmin(anytype _valueOrBinding = erpIsAdminProperty.parmValue())
+    {
+        if (! prmisDefault(_valueOrBinding))
+        {
+            erpIsAdminProperty.setValueOrBinding(_valueOrBinding);
+            return erpIsAdminProperty.parmValue();
+        }
+        else
+        {
+            return _valueOrBinding;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>applyBuild</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Applies the build values to this instance.
+    /// </summary>
+    public void applyBuild()
+    {
+        super();
+
+        this.poc_initializeCustomValues();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>poc_initializeCustomValues</Name>
+				<Source><![CDATA[
+    private void poc_initializeCustomValues()
+    {
+        PowerAppsHostBuild build = this.build() as PowerAppsHostBuild;
+        if (build)
+        {
+            this.ErpIsAdmin(isSystemAdministrator() ? 'Yes' : 'No');
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

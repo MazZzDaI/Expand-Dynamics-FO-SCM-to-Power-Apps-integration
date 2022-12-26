@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxResource xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>POC_PowerAppsHostJS</Name>
+	<FileName>POC_PowerAppsHost.js</FileName>
+	<RelativeUriInModelStore>POC\POC\AxResource\ResourceContent\Scripts\POC_PowerAppsHost.js</RelativeUriInModelStore>
+	<TypeOfResource>Scripts</TypeOfResource>
+</AxResource>

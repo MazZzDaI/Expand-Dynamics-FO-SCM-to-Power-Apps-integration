@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>POC_SysDisplayPAControl_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// CoC to alter the standard flow
+/// </summary>
+[ExtensionOf(formStr(SysDisplayPAControl))]
+final class POC_SysDisplayPAControl_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// Init the form and build the PowerApp control
+    /// </summary>
+    public void init()
+    {
+        str paData = this.args().parm();
+        FormControlPersonalizationPowerAppContext context = FormControlPersonalizationPowerAppContext::construct(paData);
+
+        FormControlPersonalizationPowerAppContext contextForParent = FormControlPersonalizationPowerAppContext::construct(paData);
+        contextForParent.PowerAppId(''); //Invalidate input to skip the standard PA processing
+        this.args().parm(contextForParent.pack()); 
+        next init();
+        
+        POC_PowerAppsHostExtendedBuild build = POC_PowerAppsHostExtended.build() as POC_PowerAppsHostExtendedBuild;
+        build.AppId(strLRTrim(context.PowerAppId()));
+        build.entityId(context.ContextValue());
+        
+        POC_PowerAppsHostExtended.applyBuild();
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

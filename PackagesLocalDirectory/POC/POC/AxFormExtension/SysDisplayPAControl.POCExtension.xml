@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>SysDisplayPAControl.POCExtension</Name>
+	<ControlModifications>
+		<AxExtensionModification xmlns="">
+			<Name>PowerAppsHost</Name>
+			<PropertyModifications>
+				<AxPropertyModification>
+					<Name>Visible</Name>
+					<Value>No</Value>
+				</AxPropertyModification>
+			</PropertyModifications>
+		</AxExtensionModification>
+	</ControlModifications>
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlmvqy0w1m1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormContainerControl">
+				<Name>POC_PowerAppsHostExtended</Name>
+				<AutoDeclaration>Yes</AutoDeclaration>
+				<HeightMode>SizeToAvailable</HeightMode>
+				<Type>Container</Type>
+				<WidthMode>SizeToAvailable</WidthMode>
+				<FormControlExtension>
+					<Name>POC_PowerAppsHostExtended</Name>
+					<ExtensionComponents />
+					<ExtensionProperties>
+						<AxFormControlExtensionProperty>
+							<Name>appId</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>allowUserSetup</Name>
+							<Type>Enum</Type>
+							<TypeName>FormAllowUserSetup</TypeName>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>contextControlName</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>powerAppsEnvironment</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>entityId</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>entityIdDataSource</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>entityIdDataField</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+						<AxFormControlExtensionProperty>
+							<Name>entityIdMethod</Name>
+							<Type>String</Type>
+						</AxFormControlExtensionProperty>
+					</ExtensionProperties>
+				</FormControlExtension>
+				<Controls />
+			</FormControl>
+			<Parent>ControlGroup</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>
